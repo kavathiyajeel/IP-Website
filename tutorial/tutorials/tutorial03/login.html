@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Log in</title>
+    <link rel="stylesheet" href="Css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300display=swap" rel="stylesheet" />
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#form').submit(function() {
+                var username = $('#email').val();
+                var password = $('#password').val();
+
+
+
+                if (username == "") {
+                    alert("Username cannot be empty");
+                } else if (password == "") {
+                    alert("password cannot be empty");
+                } else if (password.length < 12) {
+                    alert("Password must be atleast 12 characters");
+                } else {
+                    return false;
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="login-box">
+        <h1>Login</h1>
+
+        <form action="#" method="post" id="form">
+            <input type="Email" placeholder="Enter username" name="email" id="email" r>
+            <input type="password" placeholder="Enter password" name="password" id="password">
+            <input type="submit" value="LOGIN" id="submit" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <p class="para-2">
+                Not have an account? <a href="SignUp.html">Sign Up Here</a>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>

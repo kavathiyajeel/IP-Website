@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <script src="jquery-3.6.0.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="signup-box">
+        <h1>Sign Up</h1>
+        <form action="#" id="form" name="form" onsubmit="myfunction()">
+            <label>First name</label>
+            <input type="text" placeholder="" id="fname" name="fname" />
+            <label>Last name</label>
+            <input type="text" placeholder="" id="lname" name="lname" />
+            <label>Email</label>
+            <input type="Email" placeholder="" id="email" name="email" />
+            <label>Password</label>
+            <input type="password" placeholder="" id="password" name="password" />
+            <label>Confirm Password</label>
+            <input type="password" placeholder="" id="cpassword" name="cpassword" />
+            <label>Age</label>
+            <input type="number" placeholder="" min="1" max="100" name="age" id="age">
+            <label> Birth date</label>
+            <input type="date" min="2000-01-01" max="2099-01-01" placeholder="" id="bdate" name="bdate" />
+            <label>City</label>
+            <input type="text" placeholder="" id="city" name="city" />
+            <label>State</label>
+            <input type="text" placeholder="" id="state" name="state" />
+            <label>Country</label>
+            <input type="text" placeholder="" id="country" name="country" />
+            <label>Profile Photo</label>
+            <input type="file" placeholder="" id="pphoto" class="pphoto" name="pphoto" />
+            <input type="submit" name="" value="SUMBIT" />
+        </form>
+
+    </div>
+    <p class="para-3">
+        Already have an account? <a href="login.html">Login here</a>
+    </p>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    function myfunction() {
+        var awe = /^[a-zA-Z]+$/;
+        var b = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+        var c = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,20}$/;
+
+        var fname = document.forms["form"]["fname"];
+        var lname = document.forms["form"]["lname"];
+        var email = document.forms["form"]["email"];
+        var password = document.forms["form"]["password"];
+        var cpassword = document.forms["form"]["cpassword"];
+        var age = document.forms["form"]["age"];
+        var bdate = document.forms["form"]["bdate"];
+        var city = document.forms["form"]["city"];
+        var state = document.forms["form"]["state"];
+        var country = document.forms["form"]["country"];
+        var pphoto = document.forms["form"]["pphoto"];
+
+        if (fname.value == "") {
+            window.alert("First Name Is Empty");
+            fname.focus();
+            return false;
+        }
+        if (fname.value.match(awe)) {
+
+            fname.focus();
+
+        } else {
+            alert("Please Enter values in Character only");
+            fname.focus();
+            return false;
+        }
+
+        if (lname.value == "") {
+            window.alert("Last Name Is Empty");
+            lname.focus();
+            return false;
+        }
+        if (lname.value.match(awe)) {
+
+            lname.focus();
+            //return false;
+        } else {
+            alert("Please Enter values in Character only");
+            lname.focus();
+            return false;
+        }
+
+        if (email.value == "") {
+            window.alert("Email Address is Empty");
+            email.focus();
+            return false;
+        }
+        if (email.value.match(b)) {
+            password.focus();
+        } else {
+            window.alert("Please Enter Valid Email");
+            email.focus();
+            return false;
+        }
+
+        if (password.value == "") {
+            window.alert("Password is Empty");
+            password.focus();
+            return false;
+        } else if (password.value.length < 12) {
+            window.alert("Password must be atleast 12 characters");
+            password.focus();
+            return false;
+        } else {
+            cpassword.focus();
+        }
+
+
+
+        //confirm password
+        if (cpassword.value == "") {
+            window.alert("Confirm Password Is Empty");
+            cpassword.focus();
+            return false;
+        } else if (cpassword.value != password.value) {
+            window.alert("Password and Confirm Password is not Match");
+            cpassword.focus();
+            return false;
+        }
+
+
+        if (age.value == "") {
+            window.alert("Age Is Empty.");
+            age.focus();
+            return false;
+        }
+
+        if (bdate.value == "") {
+            window.alert("Birth Date Is Empty.");
+            bdate.focus();
+            return false;
+        }
+
+        if (city.value == "") {
+            window.alert("City Is Empty.");
+            city.focus();
+            return false;
+        }
+
+        if (state.value == "") {
+            window.alert("State Is Empty.");
+            state.focus();
+            return false;
+        }
+
+        if (country.value == "") {
+            window.alert("Country Is Empty.");
+            country.focus();
+            return false;
+        }
+
+        if (pphoto.value == "") {
+            window.alert("Profile Photo Is Empty.");
+            pphoto.focus();
+            return false;
+        } else {
+
+        }
+    }
+</script>

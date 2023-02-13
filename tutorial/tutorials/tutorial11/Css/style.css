@@ -1,0 +1,93 @@
+body {
+    background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), url("bg.jpg");
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+.signup-box {
+    width: 380px;
+    height: 640px;
+    margin: auto;
+    background-color: #000000;
+    border-radius: 3px;
+}
+
+.login-box {
+    width: 370px;
+    height: 310px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 15px;
+    color: #4491ea;
+}
+
+h4 {
+    text-align: center;
+    color: white;
+}
+
+form {
+    width: 290px;
+    margin-left: 20px;
+}
+
+form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border: 3px solid #4491ea;
+    border-radius: 6px;
+    outline: none;
+    margin: 6px;
+}
+
+input[type="submit"] {
+    width: 320px;
+    height: 40px;
+    margin-top: 30px;
+    border: none;
+    background-color: #4491ea;
+    color: white;
+    font-size: 18px;
+}
+
+p {
+    text-align: center;
+    padding-top: 40px;
+    font-size: 15px;
+}
+
+.para-2 {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-top: -25px;
+}
+
+.para-3 {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-top: -69px;
+}
+
+.para-2 a {
+    color: #4491ea;
+}
+
+.para-3 a {
+    color: #4491ea;
+}
